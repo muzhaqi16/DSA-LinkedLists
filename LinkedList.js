@@ -24,6 +24,22 @@ class LinkedList {
             tempNode.next = new _Node(item, null);
         }
     }
+    insertBefore(item, afterItem) {
+        let currNode = this.head;
+        if (!this.head) {
+            return null;
+        }
+        while (currNode.next.value !== afterItem) {
+            if (currNode.next === null) {
+                return null;
+            }
+            else {
+                currNode = currNode.next;
+            }
+        }
+        let next = currNode.next;
+        currNode.next = new _Node(item, next);
+    }
     insertAfter(item, prevItem) {
         const prevNode = this.find(prevItem)
         let nextNode = prevNode.next;

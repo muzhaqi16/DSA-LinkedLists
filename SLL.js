@@ -8,6 +8,7 @@ main = () => {
     SLL.insertAfter('Stranger', 'Apollo')
     SLL.insertLast('Starbuck')
     SLL.insertLast('Tauhida')
+    SLL.insertBefore('Artan', 'Husker')
 }
 display = (list) => {
     let currentNode = list.head;
