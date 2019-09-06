@@ -15,7 +15,7 @@ main = () => {
 
     SLL.insertAfter('Hotdog', 'Helo')
 
-    SLL.insertAt('Kat', 3)
+    SLL.insertAt('Kat', 10)
 
 }
 display = (list) => {

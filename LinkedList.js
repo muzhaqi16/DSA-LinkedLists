@@ -47,17 +47,15 @@ class LinkedList {
     }
     insertAt(item, position) {
         let currNode = this.head;
-        if (position === 0) {
-            this.insertFirst(item)
-        } else {
-            let x = 1;
-            while (x < position - 1) {
-                currNode = currNode.next
-                x++;
-            }
-            let nextNode = currNode.next;
-            currNode.next = new _Node(item, nextNode)
+        if (position === 0)
+            return this.insertFirst(item)
+        let x = 0;
+        while (x < position - 1 && currNode.next !== null) {
+            currNode = currNode.next
+            x++;
         }
+        let nextNode = currNode.next;
+        currNode.next = new _Node(item, nextNode)
 
     }
     find(item) {
