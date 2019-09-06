@@ -5,10 +5,18 @@ main = () => {
     SLL.insertLast('Boomer')
     SLL.insertLast('Helo')
     SLL.insertLast('Husker')
-    SLL.insertAfter('Stranger', 'Apollo')
     SLL.insertLast('Starbuck')
+
     SLL.insertLast('Tauhida')
-    SLL.insertBefore('Artan', 'Husker')
+
+    SLL.remove('Husker')
+
+    SLL.insertBefore('Athena', 'Boomer')
+
+    SLL.insertAfter('Hotdog', 'Helo')
+
+    SLL.insertAt('Kat', 3)
+
 }
 display = (list) => {
     let currentNode = list.head;

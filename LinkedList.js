@@ -45,6 +45,21 @@ class LinkedList {
         let nextNode = prevNode.next;
         prevNode.next = new _Node(item, nextNode)
     }
+    insertAt(item, position) {
+        let currNode = this.head;
+        if (position === 0) {
+            this.insertFirst(item)
+        } else {
+            let x = 1;
+            while (x < position - 1) {
+                currNode = currNode.next
+                x++;
+            }
+            let nextNode = currNode.next;
+            currNode.next = new _Node(item, nextNode)
+        }
+
+    }
     find(item) {
         // Start at the head
         let currNode = this.head;
