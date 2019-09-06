@@ -24,6 +24,11 @@ class LinkedList {
             tempNode.next = new _Node(item, null);
         }
     }
+    insertAfter(item, prevItem) {
+        const prevNode = this.find(prevItem)
+        let nextNode = prevNode.next;
+        prevNode.next = new _Node(item, nextNode)
+    }
     find(item) {
         // Start at the head
         let currNode = this.head;
